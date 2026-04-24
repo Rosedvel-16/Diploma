@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificado Lernymart</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Radio+Canada:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .certificado-main-container {
+            position: relative;
+            width: 1050px;
+            aspect-ratio: 2085 / 1603; 
+            background-color: white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            overflow: hidden;
+            container-type: inline-size;
+        }
+
+        .lado-con-logo {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50%;
+            height: 100%;
+            background-image: url('lado-con-logo.png'); 
+            background-size: 100% 100%; 
+            background-repeat: no-repeat;
+            background-position: left top;
+            z-index: 0; 
+        }
+
+        .area-contenido {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            padding: 8% 7% 5% 35%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end; 
+            text-align: right;
+            box-sizing: border-box;
+        }
+
+        /* Textos */
+        .titulo-certificado { font-size: 5.2cqw; font-weight: 600; color: #000; line-height: 1.1; margin: 0; }
+        .titulo-aprobacion { font-size: 2.3cqw; font-weight: 600; color: #000; margin-bottom: 7%; } 
+        
+        .otorgado-label { font-size: 1.7cqw; font-weight: 600; color: #000; margin-bottom: 5%; }
+        .nombre-alumno { font-family: 'Radio Canada', sans-serif; font-size: 6cqw; font-weight: 700; color: #000; line-height: 1; margin: 0 0 5% 0; }
+        
+        .curso-label { font-size: 1.15cqw; font-weight: 500; color: #000; max-width: 80%; line-height: 1.5; margin-bottom: 2%; }
+        .duracion-label { font-size: 1.15cqw; font-weight: 500; color: #000; max-width: 78%; line-height: 1.5; margin-bottom: 8%; } 
+
+        .contenedor-firmas {
+            display: flex;
+            justify-content: flex-end;
+            width: 70%; 
+            gap: 25px; 
+            margin-right: 3%; 
+        }
+
+        .bloque-firma {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 160px;
+            text-align: center;
+        }
+
+        .firma-imagen-placeholder { height: 40px; width: 100%; margin-bottom: 5px; }
+        .firma-linea { width: 100%; height: 1px; background-color: #000; margin-bottom: 8px; }
+        .firma-texto { font-size: 1cqw; font-weight: 500; color: #000; }
+
+        /* 4. SELLO AISLADO AL FINAL
+        */
+        .sello-container {
+            position: absolute;
+            bottom: 6%;
+            right: 6%;
+            width: 12cqw;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            background-image: url('sello.png'); 
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="certificado-main-container">
+        
+        <div class="lado-con-logo"></div>
+
+        <div class="sello-container"></div>
+
+        <div class="area-contenido">
+            
+            <h1 class="titulo-certificado">CERTIFICADO</h1>
+            <div class="titulo-aprobacion">DE APROBACIÓN</div>
+
+            <div class="otorgado-label">OTORGADO A:</div>
+            <h2 class="nombre-alumno">JUAN LÓPEZ</h2>
+
+            <div class="curso-label">Por culminar exitosamente el curso de “Excel para Negocios”</div>
+            <div class="duracion-label">Con una duración de 20 horas académicas, demostrando las competencias requeridas para su aplicación en entornos profesionales.</div>
+
+            <div class="contenedor-firmas">
+                <div class="bloque-firma">
+                    <div class="firma-imagen-placeholder"></div>
+                    <div class="firma-linea"></div>
+                    <div class="firma-texto">Nombre Firma</div>
+                </div>
+                <div class="bloque-firma">
+                    <div class="firma-imagen-placeholder"></div>
+                    <div class="firma-linea"></div>
+                    <div class="firma-texto">Nombre Firma</div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+</body>
+</html>
